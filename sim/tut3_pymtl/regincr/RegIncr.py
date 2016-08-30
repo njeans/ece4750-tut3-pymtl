@@ -9,6 +9,9 @@ from pymtl import *
 
 class RegIncr( Model ):
 
+  def line_trace( s ):
+    return "in:{} ({}) out:{}".format( s.in_, s.reg_out, s.out )
+
   # Constructor
 
   def __init__( s ):
@@ -21,6 +24,9 @@ class RegIncr( Model ):
     # Sequential logic
 
     s.reg_out = Wire( Bits(8) )
+
+    
+   
 
     @s.tick
     def block1():
@@ -35,4 +41,13 @@ class RegIncr( Model ):
     # and later you will insert a line tracing function to compactly
     # output the input, register, and output values.
     # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+    #Concurrent block modeling incrementer
+
+    @s.combinational
+    def block2():
+      s.out.value = s.reg_out +2
+    
+   
+
 

@@ -1,0 +1,111 @@
+$date
+    Mon Aug 29 20:10:36 2016
+$end
+$version
+    PyMTL ?.??
+$end
+$timescale
+    10ps
+$end
+
+$scope module top $end
+$var reg 8 ! in_ $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$var reg 8 $ out $end
+$var reg 8 % reg_out $end
+$upscope $end
+$enddefinitions $end
+
+b0b00000000 !
+b0b00000000 $
+b0b0 "
+b0b00000000 %
+b0b0 #
+b0b1 #
+
+b0b00000001 $
+
+#50
+b0b1 "
+
+#100
+b0b0 "
+
+#150
+b0b1 "
+
+b0b0 #
+
+b0b00000001 !
+
+#200
+b0b0 "
+
+#250
+b0b1 "
+
+b0b00000001 %
+
+b0b00000010 $
+
+b0b00010011 !
+
+#300
+b0b0 "
+
+#350
+b0b1 "
+
+b0b00010011 %
+
+b0b00010100 $
+
+b0b00100101 !
+
+#400
+b0b0 "
+
+#450
+b0b1 "
+
+b0b00100101 %
+
+b0b00100110 $
+
+b0b00110111 !
+
+#500
+b0b0 "
+
+#550
+b0b1 "
+
+b0b00110111 %
+
+b0b00111000 $
+
+b0b00000000 !
+
+#600
+b0b0 "
+
+#650
+b0b1 "
+
+b0b00000000 %
+
+b0b00000001 $
+
+#700
+b0b0 "
+
+#750
+b0b1 "
+
+#800
+b0b0 "
+
+#850
+b0b1 "
+

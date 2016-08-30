@@ -20,6 +20,12 @@ input_values.extend( [0]*3 )
 # insert code here for constructing and elaborating a RegIncr model
 # before using the SimulationTool to create a simulator.
 # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+model = RegIncr()
+model.vcd_file = "regincr-sim-p2.vcd"
+
+model.elaborate()
+
 # Create a simulator using simulation tool
 
 sim = SimulationTool( model )
@@ -42,8 +48,10 @@ for input_value in input_values:
   # replace this with a call to the simulator's print_line_trace method.
   # ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-  print " cycle = {}: in = {}, out = {}" \
-    .format( sim.ncycles, model.in_, model.out )
+  #print " cycle = {}: in = {}, out = {}" \
+  #  .format( sim.ncycles, model.in_, model.out )
+
+  sim.print_line_trace()
 
   # Tick simulator one cycle
 
