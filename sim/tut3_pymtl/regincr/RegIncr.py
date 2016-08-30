@@ -46,8 +46,9 @@ class RegIncr( Model ):
 
     @s.combinational
     def block2():
-      s.out.value = s.reg_out +2
+      s.out.value = s.reg_out +1
     
    
+
 
 
